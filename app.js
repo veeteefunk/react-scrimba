@@ -59,16 +59,49 @@
 // headerOne.classList.add("header");
 // main.appendChild(headerOne);
 
-const navbar = (
-    <nav>
-        <h1>veat media</h1>
-        <ul>
-            <li>Pricing</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
+function Header() { 
+    return(
+    <header>
+        <nav className="nav">
+            <img className="nav-logo" src="react-logo.png"></img>
+            <ul className="nav-items">
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+)
+}
 
+function OrderedList() {
+    return(
+        <ol>
+            <li>I love Javascript</li>
+            <li>It is powerful</li>
+            <li>It will give me a job</li>
+            <li>It will allow me to get well paid</li>
+        </ol>
     )
+}
 
-ReactDOM.render(navbar, document.getElementById("main"))
+function Footer() {
+    return(
+        <footer>
+            © 2022 veat media development. All rights reserved.
+        </footer>
+    )
+}
+
+function NewWebsite() {
+    return (
+    <div>
+        <Header />
+        <h1>I Love React</h1>
+        <OrderedList />
+        <Footer />
+    </div>
+    )
+}
+
+ReactDOM.render(<NewWebsite />, document.getElementById("main"))
